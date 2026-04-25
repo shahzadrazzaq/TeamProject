@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contact-section {
+    margin: 100px auto;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contact-details {
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+}
+
+.contact-details h1 {
+    margin-bottom: 20px;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.contact-desc {
+    color: #7a7979;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-email,
+.contact-number {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contact-img {
+    width: 24px;
+    margin-right: 15px;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    padding: 40px 30px;
+    border-radius: 22px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    color: #7a7979;
+    background-color: #f3f3f3;
+    font-size: 14px;
+}
+
+.form textarea {
+    grid-column: span 2;
+    height: 150px;
+    resize: none;
+}
+
+.form button {
+    width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4e2a;
+    color: white;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: #0b5ed7;
+}
+
+.success-message {
+    display: none;
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.location {
+    background: url(Conatct_images/locationbg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 100px;
+    width: 100%;
+}
+
+.location-details {
+    background-color: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 100px 60px;
+    border-radius: 18px;
+}
+
+.location-details h2 {
+    font-size: 44px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.location-details p {
+    color: #7a7979;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.address-1 {
+    margin-bottom: 20px;
+}
+
+.location-details img {
+    margin-right: 20px;
+}
+
+.faq-section {
+    padding: 80px 10%; 
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #1A1A1A;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.faq-item.active {
+    border-color: #FF4E2A; 
+}
+
+.faq-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    background: #F4F4F4; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #FF5A3C;
+}
+
+
+.faq-item.active .faq-icon {
+    background: #FF5A3C;
+    color: #fff;
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    max-height: 0px; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 24px;
+}
+
+.faq-item.active .faq-body {
+    max-height: 200px; 
+    padding-bottom: 24px;
+}
+
+.faq-body p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .form textarea {
+        grid-column: span 1;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        margin: 60px auto;
+    }
+
+    .contact-details,
+    .contact-form {
+        padding: 20px;
+    }
+
+    .location {
+        padding: 60px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-details h1 {
+        font-size: 28px;
+    }
+}
