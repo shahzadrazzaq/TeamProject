@@ -1,0 +1,156 @@
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.faq-section {
+    padding: 80px 10%; 
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #1A1A1A;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.faq-item.active {
+    border-color: #FF4E2A; 
+}
+
+.faq-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.faq-icon {
+    width: 32px;
+    height: 32px;
+    background: #F4F4F4; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #FF5A3C;
+}
+
+
+.faq-item.active .faq-icon {
+    background: #FF5A3C;
+    color: #fff;
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    max-height: 0px; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 24px;
+}
+
+.faq-item.active .faq-body {
+    max-height: 200px; 
+    padding-bottom: 24px;
+}
+
+.faq-body p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.newsletter {
+  margin-top: 80px;
+  background-color: #f35b1c;
+  border-radius: 20px;
+  padding: 100px;
+  display: flex;
+  margin: 0 auto;
+  max-width: 90%;
+  overflow: hidden !important;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.newsletter h2 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 450px;
+}
+
+.newsletter-form {
+  display: flex;
+  height: auto;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 500px;
+}
+
+.newsletter-form input {
+  flex: 1;             
+  min-width: 0; 
+  border: none;
+  padding: 14px 16px;
+  outline: none;
+  font-size: 16px;
+}
+
+.newsletter-form button {
+  background: #ff6a2a;
+  color: #fff;
+  flex-shrink: 0;       
+  width: 140px;
+  border: none;
+  border-radius: 16px;
+  margin: 15px 10px;
+  height: 55px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+
+  .newsletter {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+  .newsletter-form {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 120px;
+  }
+}
+
